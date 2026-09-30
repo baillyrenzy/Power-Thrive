@@ -1,0 +1,78 @@
+/* Power Thrive - light blue template */
+:root{--bg:#f2f8fe;--bg2:#dcecfa;--ink:#12304f;--mute:#4a6580;--blue:#1e88e5;--blue-d:#0d5fb0;--sky:#8ec5f5;--line:#b8d4ec;--white:#fff}
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.1;margin:0 0 .5em;color:var(--blue-d)}
+h1{font-size:clamp(2.6rem,7vw,4.6rem)}
+h2{font-size:clamp(2rem,4.5vw,3rem)}
+h3{font-size:1.5rem}
+p{margin:0 0 1em;max-width:62ch}
+a{color:var(--blue-d)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* Header */
+header{position:sticky;top:0;z-index:5;background:var(--white);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.5rem;padding:.8rem 5vw}
+.logo{font:700 1.6rem "Cormorant Garamond",serif;color:var(--blue-d);margin-right:auto;text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:.2rem 1.2rem}
+nav a{color:var(--mute);text-decoration:none;font-weight:500;padding:.3rem 0;border-bottom:2px solid transparent}
+nav a.on,nav a:hover{color:var(--ink);border-color:var(--blue)}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--blue);color:var(--white);font-weight:700;text-decoration:none;padding:.85rem 1.6rem;border-radius:999px;box-shadow:0 4px 14px rgba(30,136,229,.3);transition:background .2s}
+.btn:hover{background:var(--blue-d)}
+.btn.sm{padding:.5rem 1.1rem;font-size:.95rem;box-shadow:none}
+.btn.ghost{background:transparent;color:var(--blue-d);border:2px solid var(--blue);box-shadow:none}
+.btn.ghost:hover{background:var(--blue);color:var(--white)}
+.row{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem}
+
+/* Layout */
+main>section{display:none}
+main>section.show{display:block}
+.wrap{padding:4rem 5vw;max-width:1180px;margin:0 auto}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.hero .lead{font-size:1.2rem;color:var(--mute)}
+.hero img,.pic{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(18,48,79,.12);display:block}
+.pic.sm{max-width:340px}
+.band{background:var(--bg2);border-block:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2rem}
+.card{border-left:4px solid var(--sky);padding:.2rem 0 .2rem 1.2rem}
+.card p{color:var(--mute);margin:0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:4rem}
+.split.flip .pic{order:2}
+
+/* FAQ + steps */
+details{border-bottom:1px solid var(--line);padding:1rem 0}
+summary{cursor:pointer;font-weight:700;color:var(--blue-d)}
+details p{color:var(--mute);margin:.7rem 0 0}
+ol.steps{padding-left:1.2rem}
+ol.steps li{margin-bottom:.8rem}
+
+/* Footer */
+footer{background:var(--bg2);border-top:1px solid var(--line);padding:2.5rem 5vw}
+footer p{max-width:80ch;color:var(--mute);font-size:.85rem}
+
+@media(max-width:800px){.hero,.split{grid-template-columns:1fr}.split.flip .pic{order:0}.wrap{padding:2.5rem 5vw}}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:rise .8s ease both}@keyframes rise{from{opacity:0;transform:translateY(14px)}}}
+
+/* Blue template upgrade */
+:root{--bg:#eaf4ff;--bg2:#cfe5fb;--deep:#0b4a8f;--deep2:#1e88e5}
+header{background:var(--deep);border-color:var(--deep)}
+.logo{color:#fff}
+nav a{color:#cfe5fb}
+nav a.on,nav a:hover{color:#fff;border-color:#8ec5f5}
+header .btn{background:#fff;color:var(--deep)}
+header .btn:hover{background:#cfe5fb}
+.herobg{background:linear-gradient(135deg,var(--deep) 0%,var(--deep2) 100%);color:#fff}
+.herobg h1{color:#fff}
+.herobg .lead{color:#e3f0ff}
+.herobg .btn{background:#fff;color:var(--deep);box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.herobg .btn:hover{background:#cfe5fb}
+.herobg .btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.herobg .btn.ghost:hover{background:#fff;color:var(--deep)}
+.herobg .hero img{border-color:rgba(255,255,255,.4)}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-top:1.5rem}
+.gal img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;border:1px solid var(--line);box-shadow:0 8px 22px rgba(11,74,143,.15)}
+.card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--deep2);border-radius:12px;padding:1.2rem}
+footer{background:var(--deep);border:0}
+footer p{color:#cfe5fb}
